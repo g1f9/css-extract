@@ -2,23 +2,30 @@
 	"name": "css-extract",
 	"displayName": "css extract from html ",
 	"description": "extract css from html and format to scss",
-	"version": "0.0.1",
+	"version": "0.1.0",
+	"publisher": "g1f9",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/g1f9/css-extract.git"
+	},
 	"activationEvents": [
 		"onCommand:extension.extractCSS"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [{
-			"command": "extension.extractCSS",
-			"title": "extract css from html"
-		}],
-		"menus":{
+		"commands": [
+			{
+				"command": "extension.extractCSS",
+				"title": "extract css from html"
+			}
+		],
+		"menus": {
 			"editor/context": [
 				{
 					"when": "editorHasSelection",
@@ -27,7 +34,7 @@
 				}
 			]
 		},
-		"keybindings":[
+		"keybindings": [
 			{
 				"command": "extension.extractCSS",
 				"key": "ctrl+p",

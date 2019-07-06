@@ -4,7 +4,7 @@
 
 ## Features
 
-\!\[extract\]\(images/extract-css.gif\)
+![demo](images/extract-css.gif)
 
 ## Release Notes
 
