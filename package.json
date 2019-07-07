@@ -2,7 +2,7 @@
 	"name": "css-extract",
 	"displayName": "css extract from html ",
 	"description": "extract css from html and format to scss",
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"publisher": "g1f9",
 	"engines": {
 		"vscode": "^1.35.0"
