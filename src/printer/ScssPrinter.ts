@@ -34,7 +34,9 @@ export default class ScssPrinter {
     let str = "";
     let parent = node.parent;
     while (parent) {
-      str += "  ";
+      if(parent.class.length>0){
+        str += "  ";
+      }
       parent = parent.parent;
     }
     return str;
