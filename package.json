@@ -1,6 +1,6 @@
 {
 	"name": "css-extract",
-	"displayName": "css extract from html ",
+	"displayName": "css-extract",
 	"description": "extract css from html and format to scss",
 	"version": "0.1.2",
 	"publisher": "g1f9",

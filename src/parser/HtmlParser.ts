@@ -15,15 +15,21 @@ export default class HtmlParser {
     this.sParser = new SimpleHtmlParser(hanler);
   }
   handleStartElement(sTag: string, attrs: IAttr[]) {
-    let node = new VNode(sTag, attrs);
-    if (this.root === null) {
-      this.root = node;
-    } else {
-      this.parent = this.nodeStack[this.nodeStack.length - 1];
-      this.parent.addChild(node);
-      node.parent = this.parent;
+    if (
+      attrs.some(item => {
+        return item.name === "class" && item.value;
+      })
+    ) {
+      let node = new VNode(sTag, attrs);
+      if (this.root === null) {
+        this.root = node;
+      } else {
+        this.parent = this.nodeStack[this.nodeStack.length - 1];
+        this.parent.addChild(node);
+        node.parent = this.parent;
+      }
+      this.nodeStack.push(node);
     }
-    this.nodeStack.push(node);
   }
   handleEndElement(sTag: string) {
     this.nodeStack.pop();
